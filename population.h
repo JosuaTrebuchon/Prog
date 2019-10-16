@@ -9,6 +9,8 @@ class Population{
 		Cellule T[N][N];
 
 	public:
+		void printCell(size_t i, size_t j);
+		Population next() const;
 		Population();
 		void init(size_t i);//srand(time(NULL)); i=rand()%taille; y=rand()%taille;
 

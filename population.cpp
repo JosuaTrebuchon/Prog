@@ -1,6 +1,28 @@
 #include "population.h"
 #include <exception>
 #define CHECK_BOUND(i,j)\
+	if(i>=N || j>=N){\
+		std::cout << "Accès à la cellule en ("<<i<<","<<j\
+		<<"). Endehors de la limite.Abort."<<std::endl;\
+		std::terminate();\
+	}
+
+Population::printCell(size_t i, size_t j){
+	CHECK_BOUND(i, j);
+	T[i][j].print();
+}
+
+Population Population::next() const{
+	Population pop(*this);
+	for(size_t i=0; i<N; i++){
+		for(size_t j=0; j<N; j++){
+			size_t voisin = nb_voisins_vivants(i, j);
+			(pop[i][j]).setVivante(voisin==3 || (voisin==2 && T[i][j].getVivante()));
+		}
+	}
+	
+	return pop;
+}
 
 Population::Population(){
 	for(size_t i=0; i<N; i++){
