@@ -1,0 +1,22 @@
+#include "Itv.h"
+#include <iostream> //cout
+
+/*Constructeurs
+  Initialise un intervale null si aucun paramètre 
+*/
+Itv::Itv():bi(0),bs(0){}
+/*
+  Initialise un intervale avec les bornes passées en paramètre
+*/
+Itv::Itv(double _bi, double _bs): bi(_bi), bs(_bs){
+  if(bi>bs){
+    cout << "borne inferieur > borne supérieur" << endl;
+    bi= _bs;
+    bs= _bi;
+  }
+}
+
+double get
+
+
+
