@@ -54,3 +54,9 @@ bool TabOption::optionHasArgument(const string &opt) const{
     return (tab[i].getType() != Option::AUCUN);
 }
 
+// opt doit etre une option valide
+Option::Type TabOption::optionArgumentType(const std::string &opt) const {
+  size_t i = getOptionIndex(opt);
+  return tab[i].getType();
+}
+

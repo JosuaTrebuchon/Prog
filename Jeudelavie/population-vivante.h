@@ -8,7 +8,8 @@ class PopulationVivante {
  private:
   Cellule T[NMAX];
   size_t alive;
-  size_t N;
+  size_t N;//dimension
+  float probability;
 
   // retourne le nbr de voisins vivants de la cellule à (i,j)
   size_t nb_voisins_vivants(size_t, size_t) const;
@@ -50,6 +51,13 @@ class PopulationVivante {
     
   // calcul de la population suivante
   PopulationVivante next() const;  
+
+  //TODO
+  size_t getDimension()const;
+  float getProbability() const;
+
+  void setDimension(size_t n);
+  void setProbability(float p);
 };
 
 #endif

@@ -1,0 +1,13 @@
+#Ceci est un commenatire
+
+#Diemension: 8
+Dimension: 6
+
+#Probability : 0,15
+Probability : 0,5
+
+Cell : 0x0
+Cell : 1 5
+Cell : 3,2
+
+#fin du fichier
